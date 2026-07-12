@@ -44,6 +44,8 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
+--
+
 ## 🚀 Application Demo & Results
 
 Here is a look at the interactive command-line interface and reporting system in action:
@@ -59,3 +61,5 @@ Here is a look at the interactive command-line interface and reporting system in
 
 ### 4. Supplier Stock Summary
 ![Supplier Summary](results/demo4.png.png)
+
+--
