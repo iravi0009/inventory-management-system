@@ -1,2 +1,12 @@
 
 
+## Database Schema
+
+### Entity Relationship Overview
+
+```text
+users ──────────────────┐
+                        │
+categories ──< products >── suppliers
+                 │
+                 └──< stock_transactions
