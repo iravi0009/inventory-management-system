@@ -1,0 +1,25 @@
+
+---
+
+## Architecture summary
+
+```mermaid
+flowchart TB
+    CLI[main.py - InventoryCLI] --> DB[database.py - InventoryDatabase]
+    DB --> Models[models.py - Domain Models]
+    DB --> Config[config.py - SQLite Connection]
+    Config --> SQLite[(data/inventory.db)]
+
+    subgraph tables [Database Tables]
+        Users[users]
+        Categories[categories]
+        Suppliers[suppliers]
+        Products[products]
+        Transactions[stock_transactions]
+    end
+
+    SQLite --> tables
+    Products --> Categories
+    Products --> Suppliers
+    Transactions --> Products
+    Transactions --> Users
