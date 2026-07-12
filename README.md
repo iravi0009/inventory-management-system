@@ -44,4 +44,18 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
+## 🚀 Application Demo & Results
 
+Here is a look at the interactive command-line interface and reporting system in action:
+
+### 1. User Authentication & Main Dashboard
+![Main Menu](results/demo1.png.png)
+
+### 2. Total Inventory Value Report
+![Inventory Value](results/demo2.png.png)
+
+### 3. Custom Low-Stock Threshold Alerts
+![Low Stock Alerts](results/demo3.png.png)
+
+### 4. Supplier Stock Summary
+![Supplier Summary](results/demo4.png.png)
