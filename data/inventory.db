@@ -1,9 +1,127 @@
-      Database Schema
-
+Database Schema
 Entity Relationship Overview
-
 users ──────────────────────────────┐
                                     │
 categories ──< products >── suppliers
                     │
                     └──< stock_transactions
+Tables
+users
+Column	Type	Notes
+id
+INTEGER
+Primary key
+username
+TEXT
+Unique
+email
+TEXT
+Unique
+role
+TEXT
+admin, manager, or staff
+created_at
+TEXT
+Timestamp
+categories
+Column	Type	Notes
+id
+INTEGER
+Primary key
+name
+TEXT
+Unique
+description
+TEXT
+Optional
+created_at
+TEXT
+Timestamp
+suppliers
+Column	Type	Notes
+id
+INTEGER
+Primary key
+name
+TEXT
+Required
+contact_person
+TEXT
+Optional
+email
+TEXT
+Optional
+phone
+TEXT
+Optional
+address
+TEXT
+Optional
+created_at
+TEXT
+Timestamp
+products
+Column	Type	Notes
+id
+INTEGER
+Primary key
+sku
+TEXT
+Unique stock-keeping unit
+name
+TEXT
+Required
+description
+TEXT
+Optional
+category_id
+INTEGER
+FK → categories.id
+supplier_id
+INTEGER
+FK → suppliers.id (nullable)
+unit_price
+REAL
+Must be ≥ 0
+quantity
+INTEGER
+Current stock level
+reorder_level
+INTEGER
+Low-stock threshold
+created_at
+TEXT
+Timestamp
+updated_at
+TEXT
+Timestamp
+stock_transactions
+Column	Type	Notes
+id
+INTEGER
+Primary key
+product_id
+INTEGER
+FK → products.id
+user_id
+INTEGER
+FK → users.id (nullable)
+transaction_type
+TEXT
+IN, OUT, or ADJUSTMENT
+quantity_change
+INTEGER
+Signed change amount
+quantity_before
+INTEGER
+Stock before transaction
+quantity_after
+INTEGER
+Stock after transaction
+notes
+TEXT
+Optional
+created_at
+TEXT
+Timestamp
+
