@@ -1,7 +1,7 @@
 # Inventory Management System
 
 A complete, end-to-end inventory management application built in **Python** with **SQLite**.  
-Manage products, track stock movements, run analytics, and receive low-stock alerts — all from a clean command-line interface.
+Manage products, track stock movements, run analytics, and receive low-stock alert — all from a clean command-line interface.
 
 ---
 
